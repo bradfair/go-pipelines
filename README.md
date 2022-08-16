@@ -1,6 +1,6 @@
 # pipeline
 
-[![codecov](https://codecov.io/gh/./branch/master/graph/badge.svg)](https://codecov.io/gh/.)
+[![codecov](https://codecov.io/gh/bradfair/go-pipelines/branch/main/graph/badge.svg?token=1DI2ONSVP4)](https://codecov.io/gh/bradfair/go-pipelines)
 
 ## Functions
 
