@@ -72,7 +72,7 @@ Tee splits the input channel into two output channels, and blocks reading the ne
 
 `func ToSlice[Input any](ctx context.Context, input <-chan Input, count int) []Input`
 
-ToSlice converts the specified number of elements from the specified input channel into a slice.
+ToSlice converts up to the specified number of elements from the specified input channel into a slice. If the input channel is closed or the context is canceled before the specified number of elements are read, the slice will be shorter than the specified number of elements.
 
 ### func [TransformerFunc](/transformer.go#L8)
 
