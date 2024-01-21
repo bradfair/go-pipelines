@@ -119,21 +119,4 @@ func TestBridge(t *testing.T) {
 			t.Errorf("Expected output to be closed, but was not")
 		}
 	})
-
-	//t.Run("test bridgeInputStream ctx.Err()", func(t *testing.T) {
-	//	ctx, cancel := context.WithCancel(context.Background())
-	//	intChan := make(chan int)
-	//	outChan := make(chan int)
-	//	go func() {
-	//		intChan <- 1
-	//		cancel()
-	//	}()
-	//	bridgeInputStream(ctx, intChan, outChan)
-	//	select {
-	//	case <-outChan:
-	//		t.Fatal("Expected output channel to be empty")
-	//	default:
-	//		// channel was empty, test passed.
-	//	}
-	//})
 }
