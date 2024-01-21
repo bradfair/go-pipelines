@@ -47,9 +47,6 @@ func bridgeInputStream[Input any](ctx context.Context, inputs <-chan Input, out 
 			if !ok {
 				return
 			}
-			if ctx.Err() != nil {
-				return
-			}
 			out <- val
 		}
 	}
