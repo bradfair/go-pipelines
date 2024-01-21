@@ -13,7 +13,10 @@ func TransformerFunc[Input, Output any](ctx context.Context, input <-chan Input,
 			select {
 			case <-ctx.Done():
 				return
-			case val := <-input:
+			case val, ok := <-input:
+				if !ok {
+					return
+				}
 				out <- f(ctx, val)
 			}
 		}
